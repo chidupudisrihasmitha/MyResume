@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidupudi Sri Hasmitha Reddy - Live Interactive Resume</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container no-print">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Animated Mesh Background Blobs (Hidden on print) -->
+    <div class="bg-blobs no-print">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container no-print" id="toast-container"></div>
+
+    <!-- Action Header / Toolbar (Hidden on print) -->
+    <div class="action-bar no-print">
+        <div class="action-container">
+            <span class="action-title">
+                <i class="fa-solid fa-sparkles pulse-icon"></i> 
+                Live Interactive Resume
+            </span>
+            <button id="print-btn" class="print-button">
+                <i class="fa-solid fa-print"></i> Print / Download PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Resume Wrapper (Centered Single Column) -->
+    <div class="resume-wrapper">
+        <div class="resume-container">
+            
+            <!-- Professional Header Block -->
+            <header class="resume-header">
+                <div class="header-main">
+                    <div class="profile-avatar">
+                        <span>CS</span>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="full-name animate-text-glow">CHIDUPUDI SRI HASMITHA REDDY</h1>
+                        <p class="role-subtitle">B.Tech Student (Computer Science & Engineering)</p>
+                    </div>
+                </div>
+                
+                <!-- Contact Information Grid -->
+                <div class="contact-grid">
+                    <div class="contact-item tooltip-trigger" data-tooltip="Available via Call/WhatsApp">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9392091056</span>
+                    </div>
+                    <div class="contact-item tooltip-trigger" data-tooltip="Send an Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:chidupudisrihasmitha@gmail.com">chidupudisrihasmitha@gmail.com</a>
+                    </div>
+                    <div class="contact-item tooltip-trigger" data-tooltip="Visit LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/hasmitha-reddy" target="_blank">linkedin.com/in/hasmitha-reddy</a>
+                    </div>
+                    <div class="contact-item tooltip-trigger" data-tooltip="View GitHub Repositories">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/hasmitha-reddy" target="_blank">github.com/hasmitha-reddy</a>
+                    </div>
+                    <div class="contact-item tooltip-trigger" data-tooltip="Current Location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Hyderabad, India</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Professional Summary Container -->
+            <section class="resume-section">
+                <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
+                <div class="section-card summary-card">
+                    <p class="summary-text">
+                        A highly motivated and detail-oriented Computer Science Engineering student (1st Year) with hands-on foundational training and internship experience in Full Stack Web Development. Adept at building responsive web applications using HTML, CSS, JavaScript, Flask, and MySQL. Eager to leverage technical competencies, problem-solving skills, and a strong work ethic to contribute to real-world software engineering solutions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Technical Skills Container -->
+            <section class="resume-section">
+                <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Technical Skills</h2>
+                <div class="section-card skills-container-card">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <div class="skills-badges">
+                                <span class="badge tooltip-trigger" data-tooltip="Core markup structure (HTML5 API)">HTML5</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Responsive styling & Flex/Grid layout">CSS3</span>
+                                <span class="badge tooltip-trigger" data-tooltip="ES6+ syntax & DOM interactions">JavaScript</span>
+                                <span class="badge tooltip-trigger" data-tooltip="SPA components & State tracking">React.js</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Fast layouts & CSS framework component templates">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend & Database</h3>
+                            <div class="skills-badges">
+                                <span class="badge tooltip-trigger" data-tooltip="Data scripting, automation & libraries">Python</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Microframework for routing, sessions & templates">Flask</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Relational database queries, schemas & joins">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools & Platforms</h3>
+                            <div class="skills-badges">
+                                <span class="badge tooltip-trigger" data-tooltip="Local code version controls">Git</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Cloud repository hosting & collab pipelines">GitHub</span>
+                                <span class="badge tooltip-trigger" data-tooltip="Primary IDE choice & debug tools">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Internship Container -->
+            <section class="resume-section">
+                <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience & Internships</h2>
+                <div class="section-card timeline-card">
+                    <div class="timeline-item">
+                        <div class="timeline-dot-pulse"></div>
+                        <div class="timeline-header">
+                            <div class="header-left">
+                                <h3 class="role-title">Full Stack Web Development Intern</h3>
+                                <span class="company-name text-glow-hover">Ramanasoft</span>
+                            </div>
+                            <span class="date-badge">May 2024 - Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Acquiring backend development expertise using Python and Flask, integrating with structured MySQL databases.</li>
+                            <li>Building and deploying interactive, user-focused responsive web pages using modern HTML5, CSS3, and JavaScript logic.</li>
+                            <li>Collaborating on project tasks to design modular application architectures and enhance overall problem-solving speed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic & Personal Projects Container -->
+            <section class="resume-section">
+                <div class="projects-section-header">
+                    <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Key Projects</h2>
+                    <!-- Category Filters (Hidden on Print) -->
+                    <div class="project-filters no-print">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                        <button class="filter-btn" data-filter="api">API</button>
+                        <button class="filter-btn" data-filter="utility">Utilities & Games</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Restaurant Management System</h3>
+                            <i class="fa-solid fa-utensils project-icon"></i>
+                        </div>
+                        <p class="project-description">A streamlined dashboard handling real-time ordering operations, menu management, and automated receipt billing generation.</p>
+                        <div class="project-tags">
+                            <span>Flask</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="fullstack">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Online Pharmacy System</h3>
+                            <i class="fa-solid fa-prescription-bottle-medical project-icon"></i>
+                        </div>
+                        <p class="project-description">An inventory tracking and medicine ordering portal built to simplify pharmaceutical records retrieval and restocking.</p>
+                        <div class="project-tags">
+                            <span>Flask</span>
+                            <span>MySQL</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="api">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Weather Forecast Application</h3>
+                            <i class="fa-solid fa-cloud-sun-rain project-icon"></i>
+                        </div>
+                        <p class="project-description">An interactive application that pulls live weather details from third-party REST APIs and presents it dynamically based on user location search.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>REST API</span>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="utility">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Scientific Calculator</h3>
+                            <i class="fa-solid fa-calculator project-icon"></i>
+                        </div>
+                        <p class="project-description">A robust calculation interface executing standard arithmetic and advanced algebraic calculations with clean logic execution.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>CSS Grid</span>
+                            <span>UI Design</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="utility">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Smart Attendance System</h3>
+                            <i class="fa-solid fa-user-check project-icon"></i>
+                        </div>
+                        <p class="project-description">An application designed to automate attendance check-ins, store dynamic logs, and export summary reports.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Local Storage</span>
+                            <span>DOM</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="utility">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Number Guessing Game</h3>
+                            <i class="fa-solid fa-gamepad project-icon"></i>
+                        </div>
+                        <p class="project-description">An interactive game implementing randomized matching algorithms and high-score logs to create engaging user feedback loops.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Animations</span>
+                            <span>Logic</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Education Container -->
+            <section class="resume-section">
+                <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+                <div class="section-card timeline-card">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="header-left">
+                                <h3 class="role-title">B.Tech in Computer Science Engineering</h3>
+                                <span class="company-name">Aurora Deemed to be University, Hyderabad</span>
+                            </div>
+                            <span class="date-badge">2024 - Present <small class="sub-text">(1st Year)</small></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="header-left">
+                                <h3 class="role-title">Intermediate (MPC)</h3>
+                                <span class="company-name">Narayana Junior College, Ongole</span>
+                            </div>
+                            <span class="date-badge">2023 - 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div class="header-left">
+                                <h3 class="role-title">SSC (10th Class)</h3>
+                                <span class="company-name">Oxford School, Ongole</span>
+                            </div>
+                            <span class="date-badge">2022 - 2023</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Grid Container: Certifications & Achievements -->
+            <div class="section-two-column">
+                
+                <!-- Certifications Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h2>
+                    <div class="section-card list-card">
+                        <ul class="professional-list">
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Infosys Springboard - Level 1</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Infosys Springboard - Level 2</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Cisco Certification - Level 1</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Cisco Certification - Level 2</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Coursera Dynamic Public Speaking</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-circle-check text-primary"></i> <span>Virtual Labs - Math / Physics / Chem</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Achievements Section -->
+                <section class="resume-section">
+                    <h2 class="section-title"><i class="fa-solid fa-award"></i> Achievements</h2>
+                    <div class="section-card list-card">
+                        <ul class="professional-list">
+                            <li class="list-item-hover"><i class="fa-solid fa-star text-accent"></i> <span>Participated in the collegiate <strong>Trikaya Hackathon</strong>.</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-star text-accent"></i> <span>Attended intensive <strong>AI Workshop</strong> on generative systems.</span></li>
+                            <li class="list-item-hover"><i class="fa-solid fa-star text-accent"></i> <span>Won <strong>1st Prize in Carrom Competition</strong>.</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Soft Skills Section -->
+            <section class="resume-section">
+                <h2 class="section-title"><i class="fa-solid fa-people-group"></i> Soft Skills</h2>
+                <div class="section-card soft-skills-card">
+                    <div class="skills-badges">
+                        <span class="badge-soft tooltip-trigger" data-tooltip="Resolving complex logic algorithms & structures">Problem Solving</span>
+                        <span class="badge-soft tooltip-trigger" data-tooltip="Clear verbal & technical documentation sharing">Communication</span>
+                        <span class="badge-soft tooltip-trigger" data-tooltip="Collaborating efficiently in group environments">Teamwork</span>
+                        <span class="badge-soft tooltip-trigger" data-tooltip="Taking initiative & guide project checkpoints">Leadership</span>
+                        <span class="badge-soft tooltip-trigger" data-tooltip="Prioritizing sprint tasks and timeline deliverables">Time Management</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
